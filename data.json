@@ -1,0 +1,8 @@
+{
+"mac_address": "00:1A:2B:3C:4D:5E",
+"manufacturer": "Cisco Systems",
+"location": "San Jose, California, USA",
+"ip_address": "192.168.1.45",
+"suspicious_file": "suspicious-file.exe",
+"domain": "malicious-site.com"
+}

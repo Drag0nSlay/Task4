@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAC Address Investigation Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>MAC Address Investigation Lab</h1>
+        <p>Your task is to investigate the suspicious MAC address: <strong>00:1A:2B:3C:4D:5E</strong></p>
+        Follow me on <a href="https://github.com/Drag0nSlay"><strong>Github</strong></a>
+    </header>
+
+    <main>
+        <section id="task1">
+            <h2>Task 1: OUI Lookup</h2>
+            <p>Enter the MAC address to identify the manufacturer:</p>
+            <input type="text" id="mac-input" placeholder="Enter MAC Address">
+            <button onclick="lookupMAC()">Submit</button>
+            <p id="oui-result"></p>
+        </section>
+
+        <section id="task2">
+            <h2>Task 2: Geolocation</h2>
+            <p>The associated IP address is: <strong>192.168.1.45</strong>. Use the IP to find the device's location.
+            </p>
+            <button onclick="showGeolocation()">Show Geolocation</button>
+            <p id="geo-result"></p>
+        </section>
+
+        <section id="task3">
+            <h2>Task 3: Traffic Analysis</h2>
+            <p>Analyze the captured traffic below and answer:</p>
+            <pre id="traffic-log">
+[00:1A:2B:3C:4D:5E] -> GET /suspicious-file.exe HTTP/1.1
+[00:1A:2B:3C:4D:5E] -> DNS Query: malicious-site.com
+[00:1A:2B:3C:4D:5E] -> Response: 200 OK
+            </pre>
+            <p>What is the suspicious file the device tried to download?</p>
+            <input type="text" id="file-input" placeholder="Enter file name">
+            <button onclick="checkFile()">Submit</button>
+            <p id="file-result"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Task4 | Drag0nSlay</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
